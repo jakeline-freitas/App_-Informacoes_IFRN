@@ -16,7 +16,7 @@ export default function Home( { navigation} ){
                 <View style ={HomeStyles.containerButtons}>
                     
                     <HomeButton label="Notícias" icone = "newspaper" aoClicar= {() => navigation.navigate('Noticias')}/>
-                    <HomeButton label="Institucional" icone = "school" aoClicar= {() => navigation.navigate('Noticias')}/>
+                    <HomeButton label="Institucional" icone = "school" aoClicar= {() => navigation.navigate('Institucional')}/>
                     <HomeButton label="Extensões" icone = "puzzle-piece" aoClicar= {() => navigation.navigate('Noticias')}/>
                     <HomeButton label="Calendário" icone = "calendar-alt" aoClicar= {() => navigation.navigate('Noticias')}/>
                 </View>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/home';
 import News from './pages/Noticias';
+import Institutional from './pages/Institucional'
 import Courses from './pages/Cursos';
 
 import { createStackNavigator } from '@react-navigation/stack';
@@ -8,15 +9,25 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import { CardStyleInterpolators } from '@react-navigation/stack';
+
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+
+
 function homeStackScreen() {
     return(
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          gestureEnabled: true,
+          gestureDirection: "horizontal",
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+        }}
+      >
         <Stack.Screen name="Home" component={Home} options={{headerShown:false}} />
-        <Stack.Screen name="Noticias" component={News} />
-        {/* <Stack.Screen name="Pagina2" component={Pagina2} /> */}
+        <Stack.Screen name="Noticias" component={News}  />
+        <Stack.Screen name="Institucional" component={Institutional} />
         {/* <Stack.Screen name="Pagina2" component={Pagina2} /> */}
       </Stack.Navigator>
     )
@@ -37,12 +48,12 @@ export function Routes(){
             inactiveBackgroundColor:'#359830',
             labelPosition: 'below-icon',
             activeTintColor: '#ffffff',
-            inactiveTintColor:'#006400',
+            // inactiveTintColor:'#006400',
             labelStyle: {
               fontSize: 15,
               fontWeight: '600',
             },
-            // inactiveTintColor: '#B7B7CC',
+            inactiveTintColor: '#B7B7CC',
           }}
         >
             <Tabs.Screen name="Inicial" component={homeStackScreen} 

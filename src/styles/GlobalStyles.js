@@ -6,7 +6,13 @@ export default StyleSheet.create({
         flex: 1,  
     },
     title: {
-        
+        marginBottom: 10,
+        marginTop: 10,
+        textAlign: 'center',
+        alignItems: 'center',
+        fontSize: 25,
+        fontWeight: 'bold',
+           
     },
     generico: {
         alignItems:"center",
