@@ -3,6 +3,8 @@ import Home from './pages/home';
 import News from './pages/Noticias';
 import Institutional from './pages/Institucional'
 import Courses from './pages/Cursos';
+import Extension from './pages/Extensao';
+import calendario from './pages/calendario'
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -28,7 +30,8 @@ function homeStackScreen() {
         <Stack.Screen name="Home" component={Home} options={{headerShown:false}} />
         <Stack.Screen name="Noticias" component={News}  />
         <Stack.Screen name="Institucional" component={Institutional} />
-        {/* <Stack.Screen name="Pagina2" component={Pagina2} /> */}
+        <Stack.Screen name="Extensão" component={Extension} />
+        <Stack.Screen name="Calendário" component={calendario} />
       </Stack.Navigator>
     )
 }

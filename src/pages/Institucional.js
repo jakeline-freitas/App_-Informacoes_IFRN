@@ -5,7 +5,7 @@ import DefaultStyles from '../styles/GlobalStyles';
 import Stylo from '../styles/Institucional'
 
 
-export default function News( { navigation} ){
+export default function News(){
     return(
         <View style={DefaultStyles.generico}>
             <Text style={DefaultStyles.title}>

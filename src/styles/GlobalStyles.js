@@ -14,6 +14,12 @@ export default StyleSheet.create({
         fontWeight: 'bold',
            
     },
+    text:{
+        textAlign:'justify',
+        marginBottom: 10,
+        marginTop: 20,
+        marginHorizontal:15
+    },
     generico: {
         alignItems:"center",
         justifyContent:"center"
