@@ -1,10 +1,17 @@
 import React from 'react';
+
 import Home from './pages/home';
-import News from './pages/Noticias';
+import Pesquisa from './pages/Pesquisa';
 import Institutional from './pages/Institucional'
 import Courses from './pages/Cursos';
 import Extension from './pages/Extensao';
-import calendario from './pages/calendario'
+import calendario from './pages/calendario';
+
+import Pos_Graduacao from './pages/cusos/Pos-Graduacao'
+import Ads from './pages/cusos/Ads'
+import Quimica from './pages/cusos/Quimica'
+import Tec from './pages/cusos/Tecnicos'
+import Fic from './pages/cusos/Fic'
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -28,7 +35,7 @@ function homeStackScreen() {
         }}
       >
         <Stack.Screen name="Home" component={Home} options={{headerShown:false}} />
-        <Stack.Screen name="Noticias" component={News}  />
+        <Stack.Screen name="Pesquisa" component={Pesquisa}/>
         <Stack.Screen name="Institucional" component={Institutional} />
         <Stack.Screen name="Extensão" component={Extension} />
         <Stack.Screen name="Calendário" component={calendario} />
@@ -39,7 +46,12 @@ function homeStackScreen() {
 function coursesStackScreen() {
   return(
     <Stack.Navigator>
-      <Stack.Screen name="C" component={Courses} options={{headerShown:false}} />
+        <Stack.Screen name="Cursos" component={Courses} options={{headerShown:false}} />
+        <Stack.Screen name="Técnicos" component={Tec} />
+        <Stack.Screen name="ADS" component={Ads}/>
+        <Stack.Screen name="Química" component={Quimica} />
+        <Stack.Screen name="Pós-Graduação" component={Pos_Graduacao} />
+        <Stack.Screen name="FIC" component={Fic} />
     </Stack.Navigator>
   )
 }

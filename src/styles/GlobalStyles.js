@@ -10,7 +10,7 @@ export default StyleSheet.create({
         marginTop: 10,
         textAlign: 'center',
         alignItems: 'center',
-        fontSize: 25,
+        fontSize: 20,
         fontWeight: 'bold',
            
     },
@@ -50,5 +50,15 @@ export default StyleSheet.create({
         resizeMode: 'cover',
         alignItems: 'center',
         
+    },
+    buttonCourse: {
+        justifyContent: 'center',
+        alignItems:'center',
+        backgroundColor: Colors.homeButton,
+        width:200,
+        height:72,
+        borderRadius: 10,
+        marginVertical: 10,
+        marginHorizontal: 10
     }
 });
